@@ -44,7 +44,7 @@ class Blockchain:
         print(f"Block {block.index} mined with hash: {block.hash}")
 
 
-     #This function will check the validation for the blockchain by checking for the hash value , as when the data of any block will be tampered then the hash value associated with it will change and hence blockchain will not validate that block.
+    #This function will check the validation for the blockchain by checking for the hash value , as when the data of any block will be tampered then the hash value associated with it will change and hence will not validate that block.
     def validate_blockchain(self):
         for i in range(1, len(self.chain)):
             current_block = self.chain[i]
@@ -66,9 +66,10 @@ class Blockchain:
             print("\n")
 
 def main():
-     #creating the object blockchain and then below I am adding nodes.
+     #creating the object blockchain.
     blockchain = Blockchain()
 
+    #adding blocks in the blockchain.
     blockchain.add_block("Pradeep sends three Ethereum to QuadB")
     blockchain.add_block("Pradeep sends one point eight Ethereum to QuadB")
     blockchain.add_block("Pradeep sends zero point five Ethereum to QuadB")
